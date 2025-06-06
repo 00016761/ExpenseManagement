@@ -22,7 +22,6 @@ public class ExpenseCategoryService : IExpenseCategoryService
             .Where(c => c.CategoryName.ToLower() == dto.CategoryName.ToLower())
             .AsNoTracking()
             .FirstOrDefaultAsync();
-
         if (category is not null) 
             throw new CustomException(400, "category already exist");
 
@@ -70,7 +69,6 @@ public class ExpenseCategoryService : IExpenseCategoryService
     public async Task<bool> DeleteAsync(long id)
     {
         var category = await repository.GetByIdAsync(id);
-
         if (category == null) throw new CustomException(404, "category not found");
         
         await this.repository.DeleteAsync(id);

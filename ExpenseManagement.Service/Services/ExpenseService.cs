@@ -77,7 +77,6 @@ public class ExpenseService : IExpenseService
     {
         var expense = await this.repository.GetAll()
             .FirstOrDefaultAsync(e => e.Id == id);
-
         if (expense == null) throw new CustomException(404, "expense not found");
 
         var mappedExpense = this.mapper.Map(dto, expense);
