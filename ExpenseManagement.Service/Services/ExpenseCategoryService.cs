@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using ExpenseManagement.Service.Interfaces;
+using ExpenseManagement.Service.Exceptions;
 using ExpenseManagement.Domain.Domain.Entities;
 using ExpenseManagement.Service.DTOs.ExpenseCategoryDTOs;
-using ExpenseManagement.Service.Exceptions;
-using ExpenseManagement.Service.Interfaces;
-using Microsoft.EntityFrameworkCore;
 
 public class ExpenseCategoryService : IExpenseCategoryService
 {

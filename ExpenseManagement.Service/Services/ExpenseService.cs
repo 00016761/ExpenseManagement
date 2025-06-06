@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
-using ExpenseManagement.Data.Data.Repositories;
-using ExpenseManagement.Domain.Domain.Entities;
-using ExpenseManagement.Service.DTOs.ExpenseDTOs;
+using Microsoft.EntityFrameworkCore;
 using ExpenseManagement.Service.Exceptions;
 using ExpenseManagement.Service.Interfaces;
-using Microsoft.EntityFrameworkCore;
+using ExpenseManagement.Domain.Domain.Entities;
+using ExpenseManagement.Service.DTOs.ExpenseDTOs;
 
 namespace ExpenseManagement.Service.Services;
 
